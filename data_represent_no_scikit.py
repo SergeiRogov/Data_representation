@@ -2,7 +2,7 @@ import numpy as np
 import os
 
 # assign directory
-directory = "/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Assignment 1/files"
+directory = "/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/files"
 
 # iterate over files in
 # that directory
@@ -17,6 +17,6 @@ for filename in sorted(os.listdir(directory)):
             tokens = string.split()
             print(tokens)
             # df = pd.DataFrame(data)
-            # df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Assignment 1/anwser.csv", index=False, header=True)
+            # df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser.csv", index=False, header=True)
             # print(df)
 
