@@ -31,11 +31,12 @@ def vectorize(tokens):
 directory = "/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/files"
 
 # making sure a list of files in a directory doesn't contain files like .DS_store
-files_in_directory = filter(lambda c: c[0] != '.', os.listdir(directory))
+files_in_directory = filter(lambda c: c[0] != '.' and c[0] != '~', os.listdir(directory))
 # iterate over files in this directory
 for file_index, filename in enumerate(sorted(files_in_directory)):
     f = os.path.join(directory, filename)
     # checking if it is a file
+    print(filename)
     if os.path.isfile(f):
         with open(f) as f:
             string = f.read().lower()  # making text lower case
@@ -56,5 +57,5 @@ table_to_csv = [vocabulary]
 for file_tokens in all_files_tokens:
     table_to_csv.append(vectorize(file_tokens))
 df = pd.DataFrame(table_to_csv)
-df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser.csv", sep=',', index=False, header=False)
+df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/answers/anwser.csv", sep=',', index=False, header=False)
 print(df)
