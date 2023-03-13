@@ -57,5 +57,5 @@ for file_tokens in all_files_tokens:
     table_to_csv.append(vectorize(file_tokens))
 
 df = pd.DataFrame(table_to_csv)
-df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser.csv", sep=';', index=False, header=False)
+df.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser.csv", sep=',', index=False, header=False)
 print(df)

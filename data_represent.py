@@ -24,7 +24,7 @@ Count_data = CountVec.fit_transform(list_of_texts)
 
 # create dataframe
 cv_dataframe = pd.DataFrame(Count_data.toarray(), columns=CountVec.get_feature_names_out())
-cv_dataframe.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser_scikit.csv", sep=';', index=False, header=True)
+cv_dataframe.to_csv(r"/Users/macbookair/Documents/UNIC STUDIES/Machine Learning and Data Mining I/Data_representation/anwser_scikit.csv", sep=',', index=False, header=True)
 print(cv_dataframe)
 
 
